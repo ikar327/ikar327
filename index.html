@@ -8,7 +8,7 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-
+```
     body {
         font-family: -apple-system, sans-serif;
         background: #111;
@@ -295,6 +295,7 @@
     th { background: #222; color: #5f8; }
     tr:nth-child(even) { background: #151515; }
 </style>
+```
 
 </head>
 <body>
@@ -313,7 +314,7 @@
     <div class="box">
         <h2>📍 Wklej dane z Minecraft</h2>
 
-
+```
     <div class="paste-area" id="pasteArea" tabindex="0" onclick="this.focus()">
         <div class="icon">📋</div>
         <div class="text">Kliknij i wciśnij <strong>Ctrl+V</strong></div>
@@ -326,9 +327,9 @@
             <button class="paste-btn" onclick="pasteToPos(1)">📋 Wklej</button>
         </h3>
         <div class="inputs">
-            <div><label>X</label><input type="text" id="x1" inputmode="decimal"></div>
-            <div><label>Z</label><input type="text" id="z1" inputmode="decimal"></div>
-            <div><label>Yaw</label><input type="text" id="yaw1" inputmode="decimal"></div>
+            <div><label>X</label><input type="text" id="x1" inputmode="text"></div>
+            <div><label>Z</label><input type="text" id="z1" inputmode="text"></div>
+            <div><label>Yaw</label><input type="text" id="yaw1" inputmode="text"></div>
         </div>
     </div>
     
@@ -338,9 +339,9 @@
             <button class="paste-btn" onclick="pasteToPos(2)">📋 Wklej</button>
         </h3>
         <div class="inputs">
-            <div><label>X</label><input type="text" id="x2" inputmode="decimal"></div>
-            <div><label>Z</label><input type="text" id="z2" inputmode="decimal"></div>
-            <div><label>Yaw</label><input type="text" id="yaw2" inputmode="decimal"></div>
+            <div><label>X</label><input type="text" id="x2" inputmode="text"></div>
+            <div><label>Z</label><input type="text" id="z2" inputmode="text"></div>
+            <div><label>Yaw</label><input type="text" id="yaw2" inputmode="text"></div>
         </div>
     </div>
     
@@ -376,7 +377,7 @@
         <button class="copy-btn" onclick="copyTP()">📋 Kopiuj /tp</button>
     </div>
 </div>
-
+```
 
 </div>
 
@@ -386,7 +387,7 @@
     <div class="box">
         <h2>📖 Jak używać (F3+C)</h2>
 
-
+```
     <div class="step">
         <div class="step-n">1</div>
         <div class="step-t">
@@ -469,7 +470,7 @@
     <div class="box">
         <h2>📋 Metoda 17.5 bloków</h2>
 
-
+```
     <div class="info">
         1. Rzuć oko, zapisz kąt<br>
         2. Obróć się o 90° i idź 17.5 bloków<br>
@@ -585,8 +586,8 @@ function calculate() {
     
     const det = dx1 * dz2 - dz1 * dx2;
     
-    if (Math.abs(det) < 0.0001) {
-        showErr('Kąty za podobne! Przesuń się bardziej w bok.');
+    if (Math.abs(det) < 0.00001) {
+        showErr('Kąty identyczne! Przesuń się trochę w bok.');
         return;
     }
     
